@@ -43,6 +43,7 @@ export class AppComponent {
     this.calculatorDisplay = (+res.toFixed(2)).toString();
   }
 
+
   clickDivide(){
     this.storedNumber = +this.calculatorDisplay;
     this.storedFunction = 1;
@@ -75,7 +76,6 @@ export class AppComponent {
 
   calculate(): void {
     try {
-
       this.calculatorDisplay = eval(this.calculatorDisplay).toString();
     } catch (error) {
       this.calculatorDisplay = 'Error';
