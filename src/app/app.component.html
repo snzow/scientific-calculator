@@ -19,6 +19,9 @@
           <div class="col">
             <button class="btn btn-primary w-100"(click)="clickDivide()" >÷</button>
           </div>
+          <div class="col">
+            <button class="btn btn-primary w-100"(click)="clickPower()" >x^y</button>
+          </div>
         </div>
         <div class="col row mt-2" style="margin:auto; max-width:80%;" >
           <div class="col">
@@ -32,6 +35,9 @@
           </div>
           <div class="col">
             <button class="btn btn-primary w-100" (click)="clickMultiply()" >X</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary w-100" (click)="clickSqrt()" >√</button>
           </div>
         </div>
 
@@ -48,6 +54,9 @@
           <div class="col">
             <button class="btn btn-primary w-100" (click)="clickSubtract()">-</button>
           </div>
+          <div class="col">
+            <button class="btn btn-primary w-100" (click)="clickNegate()">(-)</button>
+          </div>
         </div>
 
         <div class="col row mt-2 mb-5" style="margin:auto; max-width:80%;" >
@@ -62,6 +71,9 @@
           </div>
           <div class="col">
             <button class="btn btn-primary w-100" (click)="clickAdd()">+</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary w-100" (click)="clickLog()">ln</button>
           </div>
         </div>
       </div>

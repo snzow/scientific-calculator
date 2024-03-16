@@ -38,6 +38,24 @@ export class AppComponent {
       case 4:
         res = this.storedNumber - newNumber;
         break;
+      case 5:
+        res = this.storedNumber ** newNumber;
+        break;
+      case 6:
+        res = Math.pow(this.storedNumber, 1/newNumber);
+        break;
+      case 7:
+        this.storedNumber = -1 * this.storedNumber;
+        res = this.storedNumber;
+        break;
+      case 8:
+        this.storedNumber = Math.sqrt(this.storedNumber);
+        res = this.storedNumber;
+        break;
+      case 9:
+        this.storedNumber = Math.log(this.storedNumber);
+        res = this.storedNumber;
+        break;
     }
     this.storedNumber = null;
     this.calculatorDisplay = (+res.toFixed(2)).toString();
@@ -65,6 +83,27 @@ export class AppComponent {
     this.storedNumber = +this.calculatorDisplay;
     this.storedFunction = 4;
     this.calculatorDisplay = '';
+  }
+
+  clickPower(){
+    this.storedNumber = +this.calculatorDisplay;
+    this.storedFunction = 5;
+    this.calculatorDisplay = '';
+  }
+
+  clickNegate(){
+    this.storedNumber = -1 * (+this.calculatorDisplay);
+    this.calculatorDisplay = (+this.storedNumber.toFixed(2)).toString();
+  }
+
+  clickLog(){
+    this.storedNumber = Math.log(+this.calculatorDisplay);
+    this.calculatorDisplay = (+this.storedNumber.toFixed(2)).toString();
+  }
+
+  clickSqrt(){
+    this.storedNumber = Math.sqrt(+this.calculatorDisplay);
+    this.calculatorDisplay = (+this.storedNumber.toFixed(2)).toString();
   }
 
   clearDisplay(): void {
